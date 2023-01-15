@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:include="header :: header">
+<title>Gaji</title>
+</head>
+
+<body>
+	<div th:include="header :: navbar"></div>
+
+	<div class="container">
+		<div class="row">
+			<h1 class="page-header">Update Gaji</h1>
+			<form action="/gaji/update" th:object ="${gaji}" method="POST">
+			<input type="hidden" name="idGaji" th:field="*{idGaji}" />
+				<div class="form-group">
+					<label for="gaji-sebelumnya">Gaji Sebelumnya</label> <p th:text="*{nominal}"></p>
+				</div>
+				<div class="form-group">
+					<label for="nominal">Gaji Sekarang</label>
+					<input type="text" required="required" name="nominal"
+						class="form-control" th:field="*{nominal}" />
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-danger" name="action"
+						value="update">Update</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+	<div th:include="footer :: footer"></div>
+</body>
+</html>
+

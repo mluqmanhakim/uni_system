@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:include="header :: header">
+<title>Staf</title>
+</head>
+
+<body>
+	<div th:include="header :: navbar"></div>
+
+	<div class="container">
+		<div class="row">
+			<h1 class="page-header">Tambah Staf</h1>
+			<label>Isian bertanda * harus diisi</label> <br></br>
+			<form action="/staf/add/submit" method="POST">
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label for="nik">NIK*</label> <input type="text"
+							required="required" name="nik" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="idProdi">ID Prodi*</label> <input type="text"
+							required="required" name="idProdi" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="nama">Nama*</label> <input type="text" name="nama"
+							required="required" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label for="role">Role*</label> 
+						<select name="role" class="form-control" required="required">
+							<option selected="selected" disabled="disabled">-- Select a role --</option>
+							<option value="Dekan">Dekan</option>
+							<option value="Wakil Dekan">Wakil Dekan</option>
+							<option value="Dosen">Dosen</option>
+							<option value="Staf Pendukung">Staf Pendukung</option>
+						</select>
+					</div>
+
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-danger" name="action"
+							value="simpan">Tambah</button>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+	<div th:include="footer :: footer"></div>
+</body>
+</html>
+

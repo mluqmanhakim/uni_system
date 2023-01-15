@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header">
+<title>HR</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" href="../../css/style.css"
+	th:href="@{/css/style.css}" />
+<link rel="stylesheet" href="../../css/bootstrap.min.css"
+	th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet" href="../../css/jquery.dataTables.min.css"
+	th:href="@{/css/jquery.dataTables.min.css}" />
+<link rel="stylesheet" href="../../css/magnific-popup.css"
+	th:href="@{/css/magnific-popup.css}" />
+<link rel="stylesheet" href="../../css/jquery.mmenu.all.css"
+	th:href="@{/css/jquery.mmenu.all.css}" />
+<link rel="stylesheet" href="../../css/demo.css"
+	th:href="@{/css/demo.css}" />
+<link rel="stylesheet" href="../../css/footer-basic-centered.css"
+	th:href="@{/css/footer-basic-centered.css}" />
+
+<script src="../../js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<script src="../../js/jquery-3.1.1.min.js"
+	th:src="@{/js/jquery-3.1.1.min.js}"></script>
+<script src="../../js/jquery.dataTables.min.js"
+	th:src="@{/js/jquery.dataTables.min.js}"></script>
+
+</head>
+<body>
+	<div th:fragment="navbar">
+		<div class="header_bg">
+			<div class="wrap">
+				<div class="header">
+					<ul>
+						<li>
+							<div class="logo">
+								<h1 class="clear">
+									<a th:href="@{/}" style="text-decoration: none; color: white;">Human
+										Resources Information Systems</a>
+								</h1>
+							</div>
+						</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="nav">
+			<ul>
+				<li class="home"><a th:href="@{/home}">Home</a></li>
+				<li class="tutorials"><a th:href="@{#}">Staf</a>
+					<ul>
+						<li><a th:href="@{/staf/viewall}"> Staf Prodi</a></li>
+						<li><a th:href="@{/staf/viewalllfakultas}"> Staf Fakultas</a></li>
+						<li><a th:href="@{/staf/viewallluniv}">Staf Universitas</a></li>
+						<li><a th:href="@{/staf/add}">Add Staff</a></li>
+					</ul></li>
+				<li class="news"><a th:href="@{#}">Gaji</a>
+					<ul>
+						<li><a th:href="@{/gaji/view}"> Gaji Standar</a></li>
+						<li><a th:href="@{/staf/viewGaji}"> Gaji Staf</a></li>
+					</ul></li>
+				<li class="contact"><a th:href="@{/about}">About</a></li>
+				<li class="signout"><a th:href="@{/logout}">Sign Out</a></li>
+			</ul>
+		</div>
+
+
+		<br /> <br /> <br />
+
+	</div>
+
+</body>
+</html>
+
+

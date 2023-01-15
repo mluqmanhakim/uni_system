@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="header :: header">
+<title>Home</title>
+</head>
+<body>
+
+	<div th:include="header :: navbar"></div>
+	<h1 style="text-align: center;"
+		th:text="'Selamat datang '+${username}+ ','" class="page-header">Selamat
+		datang</h1>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="well">
+					<h4>
+						Modul ini digunakan untuk pencatatan administrasi staf, baik dosen
+						(staf akademik), maupun staf pendukung.<br /> <br />Modul ini
+						digunakan untuk menambahkan data staf baru, menghitung gaji dosen
+						berdasarkan sks dan kehadiran di kelas, dan sebagainya.
+					</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br />
+
+	<div th:include="footer :: footer"></div>
+
+</body>
+</html>
+
+
+
+

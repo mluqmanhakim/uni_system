@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="header :: header">
+<title>Daftar Staf</title>
+</head>
+<body>
+
+	<div th:include="header :: navbar"></div>
+	<br />
+	<br />
+	<br />
+
+	<div class="container-fluid text-center">
+		<div class="row">
+			<div class="col-lg-6 col-lg-offset-3">
+				<div class="well">
+					<h1> Staf Dihapus</h1>
+
+					<table class="table table-bordered">
+						<tr>
+							<td align="left">NIK</td>
+							<td align="left" th:text="${staf.nik}"></td>
+							<td align="left"> Telah dihapus</td>
+						</tr>
+
+
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+<div th:include="footer :: footer"></div>
+</body>
+</html>
+
+
+
+

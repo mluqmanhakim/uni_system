@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:include="header :: header">
+<title>Not found</title>
+</head>
+<body>
+	<div th:include="header :: navbar0"></div>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<div class="container-fluid text-center">
+		<div class="row">
+			<h3 th:text="'Maaf, parameter tidak ditemukan!'"></h3>
+			<form action="/">
+				<input type="submit" value="Back to home" class="btn btn-primary" />
+			</form>
+		</div>
+	</div>
+	<div th:include="footer :: footer"></div>
+</body>
+</html>
